@@ -1,0 +1,13 @@
+[package]
+name = "my_three_d_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Core 3D rendering library (includes windowing & WebGL support by default)
+three-d = "0.19"
+
+# Required only when compiling for the web (WebAssembly)
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = "0.2"
+console_error_panic_hook = "0.1"
